@@ -1,7 +1,88 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="functions.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Silkscreen:wght@400;700&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/toggle-button.css">
+    <title>Document</title>
+</head>
+<body class="">
+    <header>
+        <toolbar>
+            <!-- Here, add the darkmode toggle button on the far left of the header -->
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </toolbar>
+        <nav class="regular-font">
+            <a href="./about.html">About</a>
+            <a href="./projects.html">Projects</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+    </header>
+    <main class="regular-font">
+        <div id="intro">
+            <div id="intro-left">
+                <div class="fadein" id="intro-highlight">Hi, I am <span>Surender</span>.</div>
+                <div class="monospace-font fadein" id="intro-description" class="monospace-font">data science enthusiast, avid web developer and music aficionado</div>
+            </div>
+            <div id="intro-right">
+                <img class="fadein" id="intro-dp" src="assets/img/dp.jpg">
+            </div>
+        </div>
+        <div id="main-content">
+            <div>
+                <div id="aboutme">
+                    <h2>About Me</h2>
+                    
+                </div>
+                <div id="mywork">
+                    <h2>My Work</h2>
+                    <div id="projects">
+                        <div class="project">
+                            chess
+                        </div>
+                        <div class="project">
+                            next
+                        </div>
+                        <div class="project">
+                            next
+                        </div>
+                        <div class="project">
+                            next
+                        </div>
+                        <div class="project">
+                            next
+                        </div>
+                        <div class="project">
+                            next
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar">
+                <a href='https://leetcode.com/u/hungryraven/'>
+                    <picture class="darkmode">
+                        <source srcset="https://leetcard.jacoblin.cool/hungryraven?theme=dark&font=Roboto&ext=heatmap&cache=0" class="darkmode"/>
+                        <img id="lc-image" alt="Loading LeetCode Stats..." src="https://leetcard.jacoblin.cool/hungryraven?theme=light&font=Roboto&ext=heatmap&cache=0">
+                    </picture>
+                </a>
+                <a href="https://github.com/surenderpsm">
+                    <picture>
+                        <source srcset="https://streak-stats.demolab.com?user=surenderpsm&theme=dark&card_width=500&card_height=200&hide_current_streak=true" class="darkmode" />
+                        <img id="gh-image" src="https://streak-stats.demolab.com?user=surenderpsm&card_width=500&card_height=200&hide_current_streak=true" alt="GitHub Streak" />
+                    </picture>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
 </body>
 </html>
