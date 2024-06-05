@@ -12,12 +12,12 @@
     <link rel="stylesheet" href="css/toggle-button.css">
     <title>Document</title>
 </head>
-<body class="">
+<body id="body" class="">
     <header>
         <toolbar>
             <!-- Here, add the darkmode toggle button on the far left of the header -->
             <label class="switch">
-                <input type="checkbox">
+                <input id="darkmode-switch" type="checkbox">
                 <span class="slider"></span>
             </label>
         </toolbar>
@@ -39,10 +39,9 @@
         </div>
         <div id="main-content">
             <div>
-                <h1>THIS IS STILL IN PROGRESS, pls check later...</h1>
                 <div id="aboutme">
                     <h2>About Me</h2>
-                    
+                    <p>Hi, I am Surender.</p>    
                 </div>
                 <div id="mywork">
                     <h2>My Work</h2>
@@ -58,20 +57,15 @@
             </div>
             <div id="sidebar">
                 <a href='https://leetcode.com/u/hungryraven/'>
-                    <picture class="darkmode">
-                        <source srcset="https://leetcard.jacoblin.cool/hungryraven?theme=dark&font=Roboto&ext=heatmap&cache=0" class="darkmode"/>
                         <img id="lc-image" alt="Loading LeetCode Stats..." src="https://leetcard.jacoblin.cool/hungryraven?theme=light&font=Roboto&ext=heatmap&cache=0">
-                    </picture>
                 </a>
                 <a href="https://github.com/surenderpsm">
-                    <picture>
-                        <source srcset="https://streak-stats.demolab.com?user=surenderpsm&theme=dark&card_width=500&card_height=200&hide_current_streak=true" class="darkmode" />
                         <img id="gh-image" src="https://streak-stats.demolab.com?user=surenderpsm&card_width=500&card_height=200&hide_current_streak=true" alt="GitHub Streak" />
-                    </picture>
                 </a>
             </div>
         </div>
     </main>
     <footer></footer>
+    <script src="js/darkmode.js"></script>
 </body>
 </html>

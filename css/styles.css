@@ -10,14 +10,12 @@
 
     --background: var(--clr-light);
     --foreground: var(--clr-dark);
-
-
 }
 
 .darkmode{
     --clr-light: #f0f0f0;
     --clr-dark: #121212;
-    --clr-primary: #767676;
+    --clr-primary: #999999;
     --clr-secondary: #31363F;
     --clr-accent: #ff7750;
 
@@ -126,7 +124,7 @@ main {
 
 #intro-description{
     font-size:0.35em;
-    color: var(--clr-secondary);
+    color: var(--clr-primary);
     width: 70%;
     animation: fadeIn ease calc(var(--baseline-animation) + 2s);
     text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
