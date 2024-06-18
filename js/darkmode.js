@@ -9,8 +9,8 @@ document.getElementById('darkmode-switch').addEventListener("click", function(){
 images = [
     {
         'id':'lc-image',
-        'lightmode':'https://leetcard.jacoblin.cool/hungryraven?theme=light&font=Roboto&ext=heatmap&cache=0',
-        'darkmode':'https://leetcard.jacoblin.cool/hungryraven?theme=dark&font=Roboto&ext=heatmap&cache=0'
+        'lightmode':'https://leetcard.jacoblin.cool/hungryraven?theme=light&font=Roboto%20Mono&ext=contest&cache=0',
+        'darkmode':'https://leetcard.jacoblin.cool/hungryraven?theme=dark&font=Roboto%20Mono&ext=contest&cache=0'
     },
     {
         'id':'gh-image',
