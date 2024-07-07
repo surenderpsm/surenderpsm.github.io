@@ -562,14 +562,6 @@ video {
   position: fixed;
 }
 
-.bottom-10{
-  bottom: 2.5rem;
-}
-
-.right-10{
-  right: 2.5rem;
-}
-
 .bottom-5{
   bottom: 1.25rem;
 }
@@ -602,11 +594,6 @@ video {
 .size-\[200px\]{
   width: 200px;
   height: 200px;
-}
-
-.size-5{
-  width: 1.25rem;
-  height: 1.25rem;
 }
 
 .rotate-180{
