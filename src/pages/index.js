@@ -173,4 +173,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => <title>Surender Soundiramourty | Graduate Student | Aspiring Software Engineer</title>

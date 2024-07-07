@@ -4,12 +4,12 @@
 module.exports = {
   siteMetadata: {
     title: `Surender Soundiramourty | Portfolio`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://surenderpsm.github.io`
   },
   plugins: ["gatsby-plugin-postcss", {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon.png"
+      "icon": "src/images/favicon.svg"
     }
   }, "gatsby-plugin-mdx", {
     resolve: 'gatsby-source-filesystem',
