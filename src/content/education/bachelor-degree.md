@@ -7,6 +7,7 @@ endDate: "2024-07-01"
 description: "Studied various topics including algorithms, data structures, and AI."
 GPA: "3.5"
 slug: "/education/bachelors/"
+logo: "../icons/vituniversity.png"
 ---
 
 - Learned advanced algorithms and data structures.

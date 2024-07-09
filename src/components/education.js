@@ -1,19 +1,28 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const EducationItem = ({data})=> {
-    const education = data.node.frontmatter
+    const fm = data.node.frontmatter
     
-    const degreeName = education.degree
-    const institution = education.institution
-    const startDate = education.startDate
-    const endDate = education.endDate
-    const current = education.current
-    const gpa  = education.GPA
-    const location = education.location
+    const degreeName = fm.degree
+    const institution = fm.institution
+    const startDate = fm.startDate
+    const endDate = fm.endDate
+    const current = fm.current
+    const gpa  = fm.GPA
+    const location = fm.location
+    const logo = fm.logo
     const content = data.node.html
     return(
-        <div>
+        <div className="bg-neutral-200 dark:bg-neutral-800 flex flex-col m-2">
+            <div className="bg-[#b9c23b] flex flex-row justify-start">
+                <GatsbyImage image={getImage(logo)} alt={institution} layout="constrained"/>
+                <span>{location}</span>
+            </div>
+            <div>
+                {degreeName}
+            </div>
             <h2>{degreeName} | {location}</h2>
             <h3>{institution}</h3>
             <p>{startDate} - {endDate}</p>
@@ -25,36 +34,44 @@ const EducationItem = ({data})=> {
 }
 const Education = () => {
   const query = graphql`
-    {
-      education: allMarkdownRemark(
-          filter: {frontmatter: {slug: {regex: "/education/"}}}
-          sort: {frontmatter: {startDate: ASC}}
-      ) {
-          edges {
-              node {
-                  frontmatter {
-                      degree
-                      institution
-                      location
-                      GPA
-                      startDate
-                      endDate
-                      current
-                  }
-                  html
-              }
+{
+  education: allMarkdownRemark(
+    filter: {frontmatter: {slug: {regex: "/education/"}}}
+    sort: {frontmatter: {startDate: ASC}}
+  ) {
+    edges {
+      node {
+        id
+        frontmatter {
+          degree
+          institution
+          location
+          GPA
+          startDate
+          endDate
+          current
+          logo{
+            childImageSharp{
+              gatsbyImageData
+            }
           }
+        }
+        html
       }
     }
+  }
+}
     `
   const data = useStaticQuery(query)
   return(
-      <div>
+    <>
         <h1>Education</h1>
-        {data.education.edges.map(edu => (
-          <EducationItem data={edu} />
+        <div className="flex flex-col-reverse md:flex-row sm: justify-around">
+        {data.education.edges.map(node => (
+            <EducationItem key={node.node.id} data={node} />
         ))}
       </div>
+    </>
   )
 }
 export default Education

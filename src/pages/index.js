@@ -2,7 +2,7 @@ import * as React from "react"
 import {useState, useEffect} from 'react'
 import Portfolio from "../components/portfolio"
 import { StaticImage } from "gatsby-plugin-image"
-// import { query } from "../components/portfolio"
+
 const DarkModeToggle = () => {
 
   const [rotateToggle, setRotateToggle] = useState(false)
@@ -53,7 +53,7 @@ const IndexPage = () => {
     <>
       
       <DarkModeToggle/>
-      <header>
+      <header className="h-screen md:h-fit">
           <div className="flex flex-col items-center m-10">
               {/* <img className="animate-[fadeInBottom_1s_ease-in-out] size-[200px] rounded-full" src={dp} alt="A headshot of Surender with foliage in the background"/> */}
               <StaticImage src="../images/dp.jpg" className="animate-[fadeInBottom_1s_ease-in-out] size-[200px] rounded-full" alt="A headshot of Surender with foliage in the background"/>

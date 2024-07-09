@@ -5,7 +5,11 @@ description: "A predictive model to gauge audience sentiment for a potential mov
 tags: ['beautifulsoup4', 'nltk']
 category: ['Machine Learning']
 slug: "/project/film-rating/"
-icons: ['../icons/python.webp']
+icons: 
+    -   icon: "../icons/python.webp"
+        name: "python"
+    -   icon: '../icons/googlecloud.webp'
+        name: "gcp"
 ---
 - **Implemented web-scraping scripts using Python and BeautifulSoup**, effectively scaling data collection for over 100,000 IMDB movies.
 - Utilized **NLTK**(Natural Language Toolkit) for extracting and processing plot summary keywords from Wikipedia, enhancing the model's understanding of film content.
