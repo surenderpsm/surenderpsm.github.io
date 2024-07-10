@@ -1,8 +1,17 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'selector',
-  content: ["./*.{html,js}"],
+  content: [
+    `./src/pages/**/*.{js,jsx,ts,tsx}`,
+    `./src/components/**/*.{js,jsx,ts,tsx}`,
+  ],
   theme: {
+    screens: {
+      'xs': '375px',
+      ...defaultTheme.screens,
+    },
     extend: {
       keyframes:{
         fadeInBottom: {
@@ -29,4 +38,3 @@ module.exports = {
   },
   plugins: [],
 }
-
