@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import VerticalHeading from "./subcomponents/verticalHeading"
+
 
 const ProjectItem = ({data})=> {
     const fm = data.node.frontmatter
@@ -70,12 +72,12 @@ const Project = () => {
 }`
   const data = useStaticQuery(query)
   return(
-      <div>
-        <h1>project</h1>
+      <section className="section-container">
+        <VerticalHeading text={"PROJECTS"}/>
         {data.project.edges.map(node => (
           <ProjectItem key={node.node.id} data={node} />
         ))}
-      </div>
+      </section>
   )
 }
 export default Project
