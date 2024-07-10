@@ -65,7 +65,7 @@ const IndexPage = () => {
   return (
     <>
       <DarkModeToggle/>
-      {/* <Hero/> */}
+      <Hero/>
 
       <main>
         <Portfolio/>
