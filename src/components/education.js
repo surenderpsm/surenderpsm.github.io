@@ -16,38 +16,35 @@ const EducationItem = ({data})=> {
     const content = data.node.html
 
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const shortHandMonths = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
     return(
-        <div className="bg-transperant dark:bg-black flex flex-col transition-colors duration-1000 px-5">
+        <div className="bg-transperant flex flex-col transition-colors duration-1000 px-5 pb-10">
             <div className="bg-transparent flex flex-row justify-between transition-colors duration-1000">
-                
-                <div className="flex flex-row justify-between basis-f">
+                <div className="flex flex-row justify-between">
                   <div>
-                    <GatsbyImage image={getImage(logo)} alt={institution} layout="constrained" className="w-20 sm:w-32 md:w-44 m-3"/>
+                    <GatsbyImage image={getImage(logo)} alt={institution} layout="constrained" className="w-14 xs:w-20 sm:w-32 md:w-36 lg:w-44 m-3"/>
                   </div>
                   <div className="flex flex-col justify-center">
-                    <span className="text-2xl sm:text-4xl md:text-4xl text-left font-light">
+                    <span className="text-sm xs:text-2xl sm:text-3xl lg:text-4xl text-left font-light">
                       {institution}
                     </span>
-                    <span className="hidden sm:block sm:text-2xl text-left font-extrabold">
+                    <span className="hidden sm:block sm:text-xl lg:text-2xl text-left font-bold">
                       {degreeName}
                     </span>
-                    <span className="font-[Teko] font-normal sm:text-2xl block xl:hidden">{`${months[startDate.getMonth()]} ${startDate.getFullYear()} - ${months[endDate.getMonth()]} ${endDate.getFullYear()}`}</span>
+                    <span className="font-['Noto_Sans_Display'] font-bold text-[12px] xs:text-base sm:text-2xl block xl:hidden italic">{`${shortHandMonths[startDate.getMonth()]} ${startDate.getFullYear()} - ${shortHandMonths[endDate.getMonth()]} ${endDate.getFullYear()}`}</span>
 
                   </div>
                 </div>
                 <div className="flex flex-col justify-center items-end">
-                        <span className="text-right font-sans text-md sm:text-lg md:text-xl">{location}</span>
-                        <span className="font-[Teko] font-normal sm:text-2xl hidden xl:block">{`${months[startDate.getMonth()]} ${startDate.getFullYear()} - ${months[endDate.getMonth()]} ${endDate.getFullYear()}`}</span>
-
-                        
+                        <span className="text-right font-sans text-[12px] xs:text-base sm:text-lg md:text-xl">{location}</span>
+                        <span className="font-['Noto_Sans_Display'] font-black text-lg 2xl:text-2xl hidden xl:block italic">{`${months[startDate.getMonth()]} ${startDate.getFullYear()} - ${months[endDate.getMonth()]} ${endDate.getFullYear()}`}</span>
+                        <span className="font-['Teko'] text-sm xs:text-base sm:text-xl md:text-2xl xs:font-semibold">{gpa?`GPA: ${gpa}`:""}</span>
                 </div>
             </div>
-            <span className="text-xl font-extrabold block sm:hidden text-left">
+            <span className="text-sm xs:text-xl font-bold block sm:hidden text-left">
                       {degreeName}
             </span>
-            {gpa}
-            {current?"This is current":""}
-            <div className="content" dangerouslySetInnerHTML={{__html: content}}></div>
+            <div className="text-sm xs:text-base md:text-lg" dangerouslySetInnerHTML={{__html: content}}></div>
         </div> 
     )
 }
