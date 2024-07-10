@@ -6,6 +6,9 @@ module.exports = {
     title: `Surender Soundiramourty | Portfolio`,
     siteUrl: `https://surenderpsm.github.io`
   },
+  flags:{
+    DEV_SSR: true
+  },
   plugins: ["gatsby-plugin-postcss", {
     resolve: 'gatsby-plugin-manifest',
     options: {
@@ -21,13 +24,5 @@ module.exports = {
       "path": "./src/content/"
     },
     __key: "pages"
-  },'gatsby-transformer-inline-svg',
-  {
-    resolve: 'gatsby-plugin-react-svg',
-    options: {
-      rule: {
-        include: /images\/vector/,
-      }
-    }
   }]
 };

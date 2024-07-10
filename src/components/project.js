@@ -44,7 +44,7 @@ const ProjectItem = ({data})=> {
     )
 }
 const Project = () => {
-  const query = graphql`
+  const getProjectquery = graphql`
 {
   project: allMarkdownRemark(filter: {frontmatter: {slug: {regex: "/project/"}}}) {
     edges {
@@ -70,7 +70,7 @@ const Project = () => {
     }
   }
 }`
-  const data = useStaticQuery(query)
+  const data = useStaticQuery(getProjectquery)
   return(
       <section className="section-container">
         <VerticalHeading text={"PROJECTS"}/>

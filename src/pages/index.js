@@ -4,28 +4,23 @@ import Portfolio from "../components/portfolio"
 import { StaticImage } from "gatsby-plugin-image"
 
 const DarkModeToggle = () => {
-
   const [rotateToggle, setRotateToggle] = useState(false)
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-  const initialDarkState =  localStorage.getItem('darkModePreference')?(localStorage.getItem('darkModePreference')==='true'?true:false):prefersDark.matches;
+  const prefersDark =  (typeof window !== 'undefined') ?  window.matchMedia('(prefers-color-scheme: dark)') : false;
+  const initialDarkState = (typeof localStorage !== 'undefined') && localStorage.getItem('darkModePreference')?(localStorage.getItem('darkModePreference')==='true'?true:false):prefersDark.matches;
   const [dark, setDark] = useState(initialDarkState)
 
   useEffect(()=>{
-    if(dark){
-      document.body.classList.add('dark')
-    }
-    else{
-      document.body.classList.remove('dark')
-    }
-  }, [dark])
+    if(typeof document !== 'undefined'){
+      dark?document.body.classList.add('dark'):document.body.classList.remove('dark');
+    }}, [dark]);
 
-  prefersDark.addEventListener("change", (evt) => setDark(evt.matches));
+  if (typeof window !== 'undefined') prefersDark.addEventListener("change", (evt) => setDark(evt.matches));
   const handleClick = ()=>{
-    setDark(!dark)
-    localStorage.setItem('darkModePreference',dark)
-    setRotateToggle(!rotateToggle)
+    setDark(!dark);
+    if (typeof localStorage !== 'undefined') localStorage.setItem('darkModePreference',dark);
+    setRotateToggle(!rotateToggle);
   }
-  return (
+  return(
     <button onClick = {handleClick} id="toggle-dark-mode" className= "fixed bottom-5 right-5 sm:bottom-10 sm:right-10">
       <svg className= {`size-10 sm:size-20 hover:scale-95 active:scale-75 duration-500 ${rotateToggle?'rotate-180':''}`} viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
           <title>Switch between Dark, Light and System Preference</title>
