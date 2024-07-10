@@ -7,13 +7,15 @@ const EducationItem = ({data})=> {
     
     const degreeName = fm.degree
     const institution = fm.institution
-    const startDate = fm.startDate
-    const endDate = fm.endDate
+    const startDate = new Date(fm.startDate)
+    const endDate = new Date(fm.endDate)
     const current = fm.current
     const gpa  = fm.GPA
     const location = fm.location
     const logo = fm.logo
     const content = data.node.html
+
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     return(
         <div className="bg-transperant dark:bg-black flex flex-col transition-colors duration-1000 px-5">
             <div className="bg-transparent flex flex-row justify-between transition-colors duration-1000">
@@ -26,23 +28,23 @@ const EducationItem = ({data})=> {
                     <span className="text-2xl sm:text-4xl md:text-4xl text-left font-light">
                       {institution}
                     </span>
-                    <span className="collapse sm:visible sm:text-2xl text-left font-extrabold">
+                    <span className="hidden sm:block sm:text-2xl text-left font-extrabold">
                       {degreeName}
                     </span>
+                    <span className="font-[Teko] font-normal sm:text-2xl block xl:hidden">{`${months[startDate.getMonth()]} ${startDate.getFullYear()} - ${months[endDate.getMonth()]} ${endDate.getFullYear()}`}</span>
+
                   </div>
                 </div>
-                <div className="flex flex-col justify-center items-end"> 
-                        <svg className="size-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                        <span className="text-right">{location}</span>
+                <div className="flex flex-col justify-center items-end">
+                        <span className="text-right font-sans text-md sm:text-lg md:text-xl">{location}</span>
+                        <span className="font-[Teko] font-normal sm:text-2xl hidden xl:block">{`${months[startDate.getMonth()]} ${startDate.getFullYear()} - ${months[endDate.getMonth()]} ${endDate.getFullYear()}`}</span>
+
+                        
                 </div>
             </div>
-            <span className="text-xl font-extrabold visible sm:collapse text-left">
+            <span className="text-xl font-extrabold block sm:hidden text-left">
                       {degreeName}
             </span>
-            <p>{startDate} - {endDate}</p>
             {gpa}
             {current?"This is current":""}
             <div className="content" dangerouslySetInnerHTML={{__html: content}}></div>

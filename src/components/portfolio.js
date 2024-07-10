@@ -4,9 +4,8 @@ import Project from "./project"
 const Portfolio = () => {
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col justify-between">
             <Education/>
-            {/* <Project/> */}
         </div>
     )
 }
