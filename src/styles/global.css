@@ -9,15 +9,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 
+:root{
+    --global-transition-duration: 500ms;
+}
+
 @layer base{
     body{
-        @apply text-black dark:text-white dark:bg-black bg-white transition duration-1000;
+        @apply text-black dark:text-white dark:bg-black bg-white transition-colors duration-[var(--global-transition-duration)];
     }
 }
     
 
 @layer components{
     .section-container {
-        @apply flex flex-row h-screen md:h-fit transition-colors duration-1000;
+        @apply flex flex-row h-screen md:h-fit;
+        transition-property: background-color;
+        transition-duration: 150ms;
     }
 }

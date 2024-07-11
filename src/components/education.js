@@ -18,8 +18,8 @@ const EducationItem = ({data})=> {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const shortHandMonths = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
     return(
-        <div className="bg-transperant flex flex-col transition-colors duration-1000 px-5 pb-10">
-            <div className="bg-transparent flex flex-row justify-between transition-colors duration-1000">
+        <div className="flex flex-col px-5 pb-10">
+            <div className="flex flex-row justify-between">
                 <div className="flex flex-row justify-between">
                   <div>
                     <GatsbyImage image={getImage(logo)} alt={institution} layout="constrained" className="w-14 xs:w-20 sm:w-32 md:w-36 lg:w-44 m-3"/>
@@ -80,9 +80,9 @@ const Education = () => {
     `
   const data = useStaticQuery(query)
   return(
-    <section className="section-container bg-orange-500 dark:bg-black">
+    <section className="flex flex-row h-screen md:h-fit duration-[var(--global-transition-duration)] bg-orange-500 dark:bg-transparent">
         <VerticalHeading text={"EDUCATION"}/>
-        <div className="flex flex-col justify-start transition-colors duration-1000 basis-full">
+        <div className="flex flex-col justify-start basis-full">
           {data.education.edges.map(node => (
               <EducationItem key={node.node.id} data={node} />
           ))}
