@@ -1,13 +1,12 @@
-import React from "react"
-import Education from "./education"
-import Project from "./project"
+import React from 'react';
+import Education from './education';
+import Project from './project';
 const Portfolio = () => {
-
     return (
         <div className="flex flex-col justify-between">
-            <Education/>
+            <Education />
         </div>
-    )
-}
+    );
+};
 
-export default Portfolio
+export default Portfolio;
