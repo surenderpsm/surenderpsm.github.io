@@ -24,18 +24,40 @@ export const Head = () => (
         {/* <script
             dangerouslySetInnerHTML={{
                 __html: `
+                (function() {
+                // Change these if you use something different in your hook.
+                var storageKey = 'user-prefers-dark';
+                var classNameDark = 'dark';
+                var classNameLight = 'light-mode';
 
-                const mode = localStorage.getItem("dm-manual-toggle")
-                var ls
-                if (mode)
-                    ls = window.matchMedia('(prefers-color-scheme: dark)').matches
-                else{
-                    ls = localStorage.getItem("user-prefers-dark")
-                    ls = ls === 'true' ? true : false;
+                function setClassOnDocumentBody(darkMode) {
+                    if (darkMode)
+                        document.body.classList.add(classNameDark)
+                    else
+                        document.body.classList.remove(classNameDark);
                 }
-                if (ls) document.html.classList.add('dark')
-                else document.html.classList.remove('dark')
-                console.log('INLINE script changed theme: dark mode is' + ls);
+                
+                var preferDarkQuery = '(prefers-color-scheme: dark)';
+                var mql = window.matchMedia(preferDarkQuery);
+                var supportsColorSchemeQuery = mql.media === preferDarkQuery;
+                var localStorageTheme = null;
+                try {
+                    localStorageTheme = localStorage.getItem(storageKey);
+                } catch (err) {}
+                var localStorageExists = localStorageTheme !== null;
+                if (localStorageExists) {
+                    localStorageTheme = (localStorageTheme === 'true') ? true : false;
+                }
+
+                // Determine the source of truth
+                if (localStorageExists) {
+                    // source of truth from localStorage
+                    setClassOnDocumentBody(localStorageTheme);
+                } else if (supportsColorSchemeQuery) {
+                    // source of truth from system
+                    setClassOnDocumentBody(mql.matches);
+                }
+                })();
                 `,
             }}
         /> */}

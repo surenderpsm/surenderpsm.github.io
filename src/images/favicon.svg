@@ -13,15 +13,10 @@
      id="defs1" />
   <g
      id="layer1">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;line-height:0;font-family:'Joti One';-inkscape-font-specification:'Joti One';letter-spacing:0.132292px;word-spacing:0px;fill:#49c805;fill-opacity:1;stroke:#ffffff;stroke-width:0.0529167;stroke-opacity:0;paint-order:markers stroke fill"
-       x="1.0583335"
-       y="8.2020836"
-       id="text1"><tspan
-         id="tspan1"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.7px;font-family:Tiny5;-inkscape-font-specification:Tiny5;fill:#49c805;fill-opacity:1;stroke:#ffffff;stroke-width:0.0529167;stroke-opacity:0"
-         x="1.0583335"
-         y="8.2020836">S</tspan></text>
+    <path
+       style="font-size:12.7px;line-height:0;font-family:Tiny5;-inkscape-font-specification:Tiny5;letter-spacing:0.132292px;word-spacing:0px;fill:#f97316;stroke:#ffffff;stroke-width:0.0529167;stroke-opacity:0;paint-order:markers stroke fill"
+       d="M 2.6458335,1.8520837 V 0.26458371 H 7.4083334 V 1.8520837 Z m -1.5875,1.5875 v -1.5875 h 1.5875 v 1.5875 z m 1.5875,0 H 5.8208334 V 5.0270836 H 2.6458335 Z m 4.7624999,3.1749999 h -1.5875 v -1.5875 h 1.5875 z m -1.5875,0 v 1.5875 H 1.0583335 v -1.5875 z"
+       id="text1"
+       aria-label="S" />
   </g>
 </svg>
