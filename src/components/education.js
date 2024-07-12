@@ -52,7 +52,7 @@ const EducationItem = ({ data }) => {
                             image={getImage(logo)}
                             alt={institution}
                             layout="constrained"
-                            className="w-14 xs:w-20 sm:w-32 md:w-36 lg:w-44 m-3"
+                            className="w-14 xs:w-20 sm:w-32 md:w-36 lg:w-44 m-3 filter invert dark:invert-0 filter-animates"
                         />
                     </div>
                     <div className="flex flex-col justify-center">
@@ -119,7 +119,7 @@ const Education = () => {
     `;
     const data = useStaticQuery(query);
     return (
-        <section className="flex flex-row h-screen md:h-fit duration-[var(--global-transition-duration)] bg-orange-500 dark:bg-transparent">
+        <section className="text-black dark:text-white flex flex-row h-screen md:h-fit">
             <VerticalHeading text={'EDUCATION'} />
             <div className="flex flex-col justify-start basis-full">
                 {data.education.edges.map((node) => (
