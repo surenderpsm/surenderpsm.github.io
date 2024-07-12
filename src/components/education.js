@@ -1,7 +1,8 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import VerticalHeading from './subcomponents/verticalHeading';
+import SectionLayout from './layouts/SectionLayout';
+
 const EducationItem = ({ data }) => {
     const fm = data.node.frontmatter;
 
@@ -52,7 +53,7 @@ const EducationItem = ({ data }) => {
                             image={getImage(logo)}
                             alt={institution}
                             layout="constrained"
-                            className="w-14 xs:w-20 sm:w-32 md:w-36 lg:w-44 m-3 filter invert dark:invert-0 filter-animates"
+                            className="main-icon filter invert dark:invert-0"
                         />
                     </div>
                     <div className="flex flex-col justify-center">
@@ -119,14 +120,11 @@ const Education = () => {
     `;
     const data = useStaticQuery(query);
     return (
-        <section className="text-black dark:text-white flex flex-row h-screen md:h-fit">
-            <VerticalHeading text={'EDUCATION'} />
-            <div className="flex flex-col justify-start basis-full">
-                {data.education.edges.map((node) => (
-                    <EducationItem key={node.node.id} data={node} />
-                ))}
-            </div>
-        </section>
+        <SectionLayout title={'EDUCATION'} keepTitleLeft={true}>
+            {data.education.edges.map((node) => (
+                <EducationItem key={node.node.id} data={node} />
+            ))}
+        </SectionLayout>
     );
 };
 export default Education;

@@ -5,6 +5,7 @@ description: 'A predictive model to gauge audience sentiment for a potential mov
 tags: ['beautifulsoup4', 'nltk']
 category: ['Machine Learning']
 slug: '/project/film-rating/'
+demo: './demos/demo1.gif'
 icons:
     - icon: '../icons/python.webp'
       name: 'python'

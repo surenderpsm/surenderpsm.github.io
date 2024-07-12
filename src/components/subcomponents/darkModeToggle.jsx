@@ -8,7 +8,6 @@ const DarkModeToggle = ({ getRoot }) => {
     /**
      * Gets the user preference by querying media on CLIENTs
      */
-    console.log('Computing Initial Dark State');
     const isSystemPreferenceLight = CLIENT_ONLY
         ? window.matchMedia('(prefers-color-scheme: light)')
         : null;
@@ -46,10 +45,7 @@ const DarkModeToggle = ({ getRoot }) => {
      * State representing dark mode
      */
     const [dark, setDark] = useState(initialDarkState);
-    /**
-     * DEBUG
-     */
-    console.log('In functional component main and here is dark:', dark);
+
     /**
      * Monitor changes in System Preference, and with any change toggle dark state
      */
@@ -65,10 +61,6 @@ const DarkModeToggle = ({ getRoot }) => {
      * Hook reacts to dark mode changes.
      */
     useEffect(() => {
-        /**
-         * DEBUG
-         */
-        console.log('In Use Effect here is dark', dark);
         dark
             ? getRoot().current.classList.add('dark')
             : getRoot().current.classList.remove('dark');
@@ -82,8 +74,7 @@ const DarkModeToggle = ({ getRoot }) => {
     return (
         <button
             onClick={handleManualToggle}
-            id="toggle-dark-mode"
-            className="fixed bottom-5 right-5 sm:bottom-10 sm:right-10"
+            className="fixed bottom-5 right-5 sm:bottom-10 sm:right-10 z-[3000]"
         >
             <svg
                 ref={dmSymbol}

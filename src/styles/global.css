@@ -9,21 +9,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 
 :root {
-    --global-transition-duration: 1s;
+    --global-transition-duration: 500ms;
+}
+
+@layer base {
+    div {
+        @apply dark:text-white text-black;
+    }
+    h2 {
+        @apply text-sm xs:text-2xl sm:text-3xl lg:text-4xl text-left font-light;
+    }
+    h3 {
+        @apply sm:text-xl lg:text-2xl text-left font-bold;
+        display:;
+    }
 }
 
 @layer components {
     .main-wrapper {
         @apply dark:bg-black bg-white transition duration-[var(--global-transition-duration)] min-h-screen;
     }
-    ,
-    .section-container {
-        @apply flex flex-row h-screen md:h-fit;
-        transition-property: background-color;
-        transition-duration: 150ms;
+
+    .main-icon {
+        @apply w-14 xs:w-20 sm:w-32 md:w-36 lg:w-44 m-3;
     }
-    /* 
-    .filter-animates {
-        transition: filter var(--global-transition-duration);
-    } */
+    .supplement-icon {
+        @apply w-7 xs:w-10 sm:w-16 md:w-16 lg:w-20 m-3;
+    }
 }
