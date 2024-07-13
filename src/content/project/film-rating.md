@@ -1,11 +1,14 @@
 ---
 title: 'Predicting Film Rating and Audience Sentiment'
-link: 'https://surenderpsm.github.io/film-rating'
+status: 'Archived'
+rating: 6
+link: 'https://surenderpsm.github.io'
 description: 'A predictive model to gauge audience sentiment for a potential movie'
 tags: ['beautifulsoup4', 'nltk']
 category: ['Machine Learning']
 slug: '/project/film-rating/'
 demo: './demos/demo1.gif'
+repo: 'https://github.com/surenderpsm/surenderpsm.github.io'
 icons:
     - icon: '../icons/python.webp'
       name: 'python'

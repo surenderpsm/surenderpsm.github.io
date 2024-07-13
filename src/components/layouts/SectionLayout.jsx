@@ -3,10 +3,10 @@ import VerticalHeading from '../subcomponents/verticalHeading';
 
 const SectionLayout = ({ title, children, keepTitleLeft }) => (
     <section
-        className={`flex ${keepTitleLeft ? 'flex-row' : 'flex-row-reverse'} h-screen md:h-fit`}
+        className={`flex ${keepTitleLeft ? 'flex-row' : 'flex-row-reverse'} min-h-screen md:min-h-fit`}
     >
         <VerticalHeading text={title} />
-        <div className="flex flex-col justify-start basis-full">{children}</div>
+        {children}
     </section>
 );
 

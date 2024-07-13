@@ -121,9 +121,11 @@ const Education = () => {
     const data = useStaticQuery(query);
     return (
         <SectionLayout title={'EDUCATION'} keepTitleLeft={true}>
-            {data.education.edges.map((node) => (
-                <EducationItem key={node.node.id} data={node} />
-            ))}
+            <div className="flex flex-col justify-start basis-full">
+                {data.education.edges.map((node) => (
+                    <EducationItem key={node.node.id} data={node} />
+                ))}
+            </div>
         </SectionLayout>
     );
 };
