@@ -1,8 +1,8 @@
 import React from 'react';
 
-const VerticalHeading = ({ text }) => {
+const VerticalHeading = ({ text, horizontal }) => {
     return (
-        <div className="flex flex-col sticky top-0 h-fit md:basis-1/12">
+        <div className={`flex ${horizontal?'flex-row justify-center':'flex-col sticky top-0'}  h-fit md:basis-1/12`}>
             {text.split('').map((char, index) => (
                 <span
                     key={index}

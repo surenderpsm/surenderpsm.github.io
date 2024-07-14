@@ -11,7 +11,7 @@ const CertificationItem = ({ data }) => {
     const title = fm.title;
 
     return (
-        <a href={verify} className='self-start'>
+        <a href={verify} className="self-start">
             <GatsbyImage
                 image={getImage(badge)}
                 alt={title}

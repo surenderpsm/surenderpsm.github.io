@@ -16,9 +16,9 @@ const ProjectItem = ({ data }) => {
     const status = fm.status;
     const repo = fm.repo;
 
-    const archived = status === 'Archived'
-    const live = status === 'Live'
-    const incomplete = status === 'Work in Progress'
+    const archived = status === 'Archived';
+    const live = status === 'Live';
+    const incomplete = status === 'Work in Progress';
     return (
         <div className="flex flex-col-reverse xl:flex-row px-5 pb-10">
             {/* <div className="basis-1/4 flex justify-center">

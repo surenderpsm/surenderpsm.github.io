@@ -21,7 +21,12 @@
     }
     h3 {
         @apply sm:text-xl lg:text-2xl text-left font-bold;
-        display:;
+    }
+    h4 {
+        @apply text-[10px];
+    }
+    h5 {
+        @apply text-[8px];
     }
 }
 
@@ -36,8 +41,10 @@
     .supplement-icon {
         @apply w-7 xs:w-8 sm:w-14 md:w-16 lg:w-20 m-3;
     }
-
     .tag {
         @apply inline-block m-1 p-1 px-2 rounded-xl;
+    }
+    .skill-icon {
+        @apply self-center w-8 xs:w-10 sm:w-14 md:w-40 lg:w-52 m-1;
     }
 }

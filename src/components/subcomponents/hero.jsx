@@ -2,7 +2,7 @@ import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
 const Hero = () => (
-    <header className="h-screen sm:h-fit flex flex-col justify-center">
+    <header className="h-screen flex flex-col justify-center overflow-clip">
         <div className="flex flex-col items-center m-10">
             <StaticImage
                 src="../../images/dp.jpg"
