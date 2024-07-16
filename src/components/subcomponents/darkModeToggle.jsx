@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 
+import { motion } from 'framer-motion';
 const DarkModeToggle = ({ getRoot }) => {
     /**
      * Determines whether this runs on a CLIENT
@@ -72,13 +73,15 @@ const DarkModeToggle = ({ getRoot }) => {
         setDark(!dark);
     };
     return (
-        <button
+        <motion.button
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 1.1 }}
             onClick={handleManualToggle}
             className="fixed bottom-5 right-5 sm:bottom-10 sm:right-10 z-[3000]"
         >
             <svg
                 ref={dmSymbol}
-                className={`size-10 sm:size-20 hover:scale-95 active:scale-75 duration-500`}
+                className={`size-10 sm:size-20 duration-500`}
                 viewBox="0 0 48 48"
                 xmlns="http://www.w3.org/2000/svg"
             >
@@ -101,7 +104,7 @@ const DarkModeToggle = ({ getRoot }) => {
                     </g>
                 </g>
             </svg>
-        </button>
+        </motion.button>
     );
 };
 

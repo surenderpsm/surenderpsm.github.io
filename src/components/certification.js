@@ -22,7 +22,7 @@ const CertificationItem = ({ data }) => {
     );
 };
 
-const Certification = () => {
+const Certification = ({ color }) => {
     const query = graphql`
         {
             certification: allMarkdownRemark(
@@ -48,8 +48,8 @@ const Certification = () => {
     `;
     const data = useStaticQuery(query);
     return (
-        <SectionLayout title={'CERTIFICATIONS'} keepTitleLeft={true}>
-            <div className="flex flex-col lg:flex-row justify-start gap-24 basis-full">
+        <SectionLayout title={'CERTIFIED'} color={color}>
+            <div className="section-content-wrapper flex flex-col lg:flex-row justify-start gap-24 basis-full">
                 {data.certification.edges.map((node) => (
                     <CertificationItem key={node.node.id} data={node} />
                 ))}

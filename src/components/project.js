@@ -131,7 +131,7 @@ const ProjectItem = ({ data }) => {
         </div>
     );
 };
-const Project = () => {
+const Project = ({ color }) => {
     const getProjectquery = graphql`
         {
             project: allMarkdownRemark(
@@ -169,8 +169,12 @@ const Project = () => {
     `;
     const data = useStaticQuery(getProjectquery);
     return (
-        <SectionLayout title={'PROJECTS'} keepTitleLeft={false}>
-            <div className="flex flex-col justify-start basis-full">
+        <SectionLayout
+            title={'PROJECTS'}
+            color={color}
+            subtitle={"See what I'm upto"}
+        >
+            <div className="section-content-wrapper flex flex-col justify-start basis-full bg-neutral-400/85 dark:bg-black/30">
                 {data.project.edges.map((node) => (
                     <ProjectItem key={node.node.id} data={node} />
                 ))}

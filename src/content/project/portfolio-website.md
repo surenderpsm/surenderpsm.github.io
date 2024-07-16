@@ -4,8 +4,17 @@ status: 'Live'
 rating: 10
 link: 'https://surenderpsm.github.io'
 description: 'Static webpage aimed at increasing maintainablility'
-tags: ['ReactJS', 'Gatsby', 'GraphQL', 'TailwindCSS', 'JavaScript']
-category: ['Static Site Framework', 'Front-end Development']
+tags:
+    [
+        'ReactJS',
+        'Gatsby',
+        'GraphQL',
+        'TailwindCSS',
+        'JavaScript',
+        'Framer Motion',
+    ]
+category:
+    ['Static Site Framework', 'Front-end Development', 'Responsive Web Design']
 slug: '/project/portfolio-website/'
 repo: 'https://github.com/surenderpsm/surenderpsm.github.io'
 icons:
@@ -19,6 +28,8 @@ icons:
       name: 'graphQL'
     - icon: '../icons/tailwind.webp'
       name: 'tailwindCSS'
+    - icon: '../icons/framer_motion.webp'
+      name: 'Framer Motion'
 ---
 
 -   Leveraged **Gatsby**, a ReactJS framework for fast and optimized static site generation using GraphQL for querying markdown files for dynamic content rendering.

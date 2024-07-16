@@ -8,11 +8,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+
 :root {
     --global-transition-duration: 500ms;
 }
 
 @layer base {
+    html {
+        @apply snap-mandatory snap-y;
+    }
     div {
         @apply dark:text-white text-black;
     }
@@ -32,9 +37,12 @@
 
 @layer components {
     .main-wrapper {
-        @apply dark:bg-black bg-white transition duration-[var(--global-transition-duration)] min-h-screen;
+        @apply dark:bg-black bg-white;
+        /* transition duration-[var(--global-transition-duration)] */
     }
-
+    .section-content-wrapper {
+        @apply relative top-0;
+    }
     .main-icon {
         @apply w-14 xs:w-20 sm:w-32 md:w-36 lg:w-44 m-3;
     }
@@ -46,5 +54,11 @@
     }
     .skill-icon {
         @apply self-center w-8 xs:w-10 sm:w-14 md:w-40 lg:w-52 m-1;
+    }
+}
+
+@layer utilities {
+    .progress-bar {
+        @apply fixed top-0 left-0 right-0 h-3 bg-red-600 origin-top-left z-50;
     }
 }

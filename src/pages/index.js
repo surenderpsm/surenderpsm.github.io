@@ -2,18 +2,28 @@ import * as React from 'react';
 import Portfolio from '../components/portfolio';
 import DarkModeToggle from '../components/subcomponents/darkModeToggle';
 import Hero from '../components/subcomponents/hero';
+import { motion, useScroll, useSpring } from 'framer-motion';
 
 const IndexPage = () => {
     const rootDOM = React.createRef();
+    const { scrollYProgress } = useScroll();
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 50,
+        restDelta: 0.0001,
+    });
     return (
-        <div id="root" className="main-wrapper" ref={rootDOM}>
-            <DarkModeToggle getRoot={() => rootDOM} />
-            <Hero />
+        <>
+            <motion.div className="progress-bar" style={{ scaleX: scaleX }} />
+            <div id="root" className="main-wrapper" ref={rootDOM}>
+                <DarkModeToggle getRoot={() => rootDOM} />
+                <Hero />
 
-            <main>
-                <Portfolio />
-            </main>
-        </div>
+                <main>
+                    <Portfolio />
+                </main>
+            </div>
+        </>
     );
 };
 

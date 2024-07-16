@@ -45,7 +45,7 @@ const EducationItem = ({ data }) => {
         'DEC',
     ];
     return (
-        <div className="flex flex-col px-5 pb-10">
+        <div className="flex flex-col p-10">
             <div className="flex flex-row justify-between">
                 <div className="flex flex-row justify-between">
                     <div>
@@ -88,7 +88,7 @@ const EducationItem = ({ data }) => {
         </div>
     );
 };
-const Education = () => {
+const Education = ({ color }) => {
     const query = graphql`
         {
             education: allMarkdownRemark(
@@ -120,8 +120,8 @@ const Education = () => {
     `;
     const data = useStaticQuery(query);
     return (
-        <SectionLayout title={'EDUCATION'} keepTitleLeft={true}>
-            <div className="flex flex-col justify-start basis-full">
+        <SectionLayout title={'EDUCATION'} color={color}>
+            <div className="section-content-wrapper min-h-screen flex flex-col justify-start basis-full bg-white/80 dark:bg-black/80">
                 {data.education.edges.map((node) => (
                     <EducationItem key={node.node.id} data={node} />
                 ))}

@@ -20,6 +20,9 @@ frameworks:
     - icon: '../icons/tailwind.webp'
       name: 'tailwindCSS'
       level: 3
+    - icon: '../icons/framer_motion.webp'
+      name: 'Framer Motion'
+      level: 1
 cloud:
     - icon: '../icons/gcp.webp'
       name: 'Google Cloud Platform'
@@ -39,7 +42,7 @@ pl:
       level: 4
     - icon: '../icons/python.webp'
       name: 'Python'
-      level: 4
+      level: 3
     - icon: '../icons/css.webp'
       name: 'CSS'
       level: 3
