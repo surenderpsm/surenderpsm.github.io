@@ -13,7 +13,7 @@ const Heading = ({ text, color }) => {
                     transition={{ type: 'spring', stiffness:100}}
                     viewport={{omce: true}}
                     key={index}
-                    className="self-center text-[2em] xs:text-[4em] sm:text-[5em] xl:text-[10em] 2xl:text-[12em] font-['Rubik_Mono_One'] -z-10"
+                    className="self-center text-[2em] xs:text-[3em] sm:text-[5em] xl:text-[10em] 2xl:text-[12em] font-['Rubik_Mono_One'] -z-1"
                 >
                     {char}
                 </motion.div>
