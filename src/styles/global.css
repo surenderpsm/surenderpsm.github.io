@@ -16,7 +16,7 @@
 
 @layer base {
     html {
-        @apply snap-mandatory snap-y;
+        @apply snap-proximity snap-y;
     }
     div {
         @apply dark:text-white text-black;
@@ -44,7 +44,7 @@
         /* transition duration-[var(--global-transition-duration)] */
     }
     .section-content-wrapper {
-        @apply relative top-0;
+        @apply relative top-0 snap-end;
     }
     .main-icon {
         @apply w-14 xs:w-20 sm:w-32 md:w-36 lg:w-44 m-3;

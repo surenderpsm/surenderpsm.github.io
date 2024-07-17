@@ -118,7 +118,7 @@ const ProjectItem = ({ data }) => {
                     mass: 0.3,
                 }}
                 onClick={() => setIsOpen((isOpen) => !isOpen)}
-                className={`z-10 w-screen h-screen fixed top-0 left-0 flex flex-col justify-start bg-black/60 ${isOpen ? 'block' : 'hidden'}`}
+                className={`z-10 w-screen h-dvh fixed top-0 left-0 flex flex-col justify-start bg-black/60 ${isOpen ? 'block' : 'hidden'}`}
             >
                 <div className="bg-red-200 dark:bg-red-900 max-w-screen-md self-center m-10 p-3 flex flex-col flex-grow justify-between">
                     <div className="">
