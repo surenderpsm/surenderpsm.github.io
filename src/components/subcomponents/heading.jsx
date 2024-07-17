@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const Heading = ({ text, color }) => {
     return (
         <div
-            className={`${color} flex flex-col sm:flex-row justify-evenly h-[100dvh] sticky top-0`}
+            className={`${color} flex flex-col sm:flex-row justify-evenly h-[100dvh] sticky top-0 bottom-0`}
         >
             {text.split('').map((char, index) => (
                 <motion.div
