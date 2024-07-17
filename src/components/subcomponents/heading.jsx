@@ -8,10 +8,10 @@ const Heading = ({ text, color }) => {
         >
             {text.split('').map((char, index) => (
                 <motion.div
-                    initial={{ scale:1.3}}
-                    whileInView={{scale:1}}
-                    transition={{ type: 'spring', stiffness:100}}
-                    viewport={{omce: true}}
+                    initial={{ scale: 1.3 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ type: 'spring', stiffness: 100 }}
+                    viewport={{ omce: true }}
                     key={index}
                     className="self-center text-[2em] xs:text-[3em] sm:text-[5em] xl:text-[10em] 2xl:text-[12em] font-['Rubik_Mono_One'] -z-1"
                 >

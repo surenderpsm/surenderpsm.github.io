@@ -12,7 +12,7 @@ repo: 'https://github.com/surenderpsm/surenderpsm.github.io'
 icons:
     - icon: '../icons/python.webp'
       name: 'python'
-    - icon: '../icons/googlecloud.webp'
+    - icon: '../icons/gcp.webp'
       name: 'gcp'
 ---
 

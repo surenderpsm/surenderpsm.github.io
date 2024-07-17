@@ -74,8 +74,9 @@ const DarkModeToggle = ({ getRoot }) => {
     };
     return (
         <motion.button
-            whileHover={{ scale: 1.2 }}
-            whileTap={{ scale: 1.1 }}
+            whileHover={{ scale: 0.9 }}
+            whileTap={{ scale: 0.8 }}
+            transition={{ type: 'spring', stiffness: 300 }}
             onClick={handleManualToggle}
             className="fixed bottom-5 right-5 sm:bottom-10 sm:right-10 z-[3000]"
         >

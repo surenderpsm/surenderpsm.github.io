@@ -7,13 +7,13 @@ import { motion, spring } from 'framer-motion';
 const theme = 'blue';
 
 const SkillItem = ({ delay, icon, name, color, level, size }) => {
-    console.log(delay)
+    console.log(delay);
     return (
         <motion.div
-            initial={{ scale: 1.4, opacity: 0, translateX: -50}}
-            whileInView={{ scale: 1, opacity: 1, translateX: 0}}
-            transition={{ type: 'spring', stiffness: 100, delay: delay*0.02 }}
-            viewport={{once:true}}
+            initial={{ scale: 1.4, opacity: 0, translateX: -50 }}
+            whileInView={{ scale: 1, opacity: 1, translateX: 0 }}
+            transition={{ type: 'spring', stiffness: 100, delay: delay * 0.02 }}
+            viewport={{ once: true }}
             className={`flex flex-col justify-between flex-grow m-2 min-w-20 md:min-w-20 items-center xs:self-stretch ${color}`}
         >
             {icon && level ? (
@@ -44,10 +44,7 @@ const SkillItem = ({ delay, icon, name, color, level, size }) => {
 
 const SkillCategory = ({ data, category, color, levelMatrix }) => {
     return (
-        <motion.div
-            
-            className="flex flex-col m-3 flex-grow"
-        >
+        <motion.div className="flex flex-col m-3 flex-grow">
             <div className="">
                 <SkillItem
                     name={

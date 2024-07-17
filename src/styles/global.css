@@ -33,6 +33,9 @@
     h5 {
         @apply text-[8px];
     }
+    ul {
+        @apply list-disc list-inside;
+    }
 }
 
 @layer components {
