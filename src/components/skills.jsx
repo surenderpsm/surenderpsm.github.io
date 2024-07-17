@@ -73,7 +73,7 @@ const SkillCategory = ({ data, category, color, levelMatrix }) => {
                         <GatsbyImage
                             image={getImage(data.icon)}
                             alt={data.name}
-                            className="aspect-square m-2 p-2 w-20 md:w-28"
+                            className="aspect-square m-2 w-20 md:w-28"
                         />
                     ) : null;
                     return (
