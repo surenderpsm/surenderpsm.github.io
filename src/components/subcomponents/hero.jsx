@@ -12,12 +12,11 @@ const Hero = () => (
             <div className="animate-[fadeInBottom_1.5s_ease-in-out] font-display font-extralight text-center text-3xl xs:text-4xl mt-10 mb-2">
                 Hi, I am{' '}
                 <span className="font-extrabold text-4xl xs:text-5xl">
-                    Surender
+                    Surénder
                 </span>
             </div>
             <div className="animate-[fadeInBottom_2s_ease-in-out] font-mono text-center text-sm xs:text-base">
-                Computer Science Graduate | Front-end Developer | Data Science
-                Enthusiast
+                Computer Science Graduate | Java Developer | Python Tinkerer
             </div>
         </div>
     </header>
